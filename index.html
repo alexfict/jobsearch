@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+
+  <title>Jobbsearch</title>
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+</head>
+
+<body>
+
+  <div id="app">
+    <job-item
+      v-for="job in jobs"
+      :job="job"
+      :key="job.id"
+      v-on:drop-job-item="dropJobItem">
+    </job-item>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="assets/js/components/jobitem.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
